@@ -14,11 +14,14 @@ env/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Data files
+# Raw data files are not tracked
 data/raw/
-data/processed/
 
-# Output files
+# Keep processed cleaned dataset for app reproducibility
+!data/processed/
+!data/processed/draws_clean.csv
+
+# Output files are not tracked
 outputs/
 
 # Environment variables
