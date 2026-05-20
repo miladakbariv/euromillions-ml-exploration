@@ -1,0 +1,4 @@
+method,runs,mean_avg_main_matches,std_avg_main_matches,mean_avg_star_matches,std_avg_star_matches,mean_avg_total_matches,std_avg_total_matches,best_avg_total_matches,worst_avg_total_matches
+frequency,30,0.5052,0.0206,0.3345,0.0189,0.8397,0.0254,0.8858,0.7805
+hybrid,30,0.4989,0.0163,0.3319,0.0163,0.8308,0.025,0.8819,0.7895
+random,30,0.4957,0.0218,0.3302,0.019,0.8259,0.0333,0.9089,0.7561
