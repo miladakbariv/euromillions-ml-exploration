@@ -47,19 +47,19 @@ Raw data files are stored locally inside:
 data/raw/
 ```
 
-The cleaned dataset is generated as:
+The repository includes the cleaned dataset required to run the Streamlit app:
 
 ```text
 data/processed/draws_clean.csv
 ```
 
-The raw and processed data folders are not included in GitHub by default. Users who want to reproduce the project should download the historical EuroMillions CSV files from win2day.at and place them inside `data/raw/`.
+The raw yearly CSV files from win2day.at are not redistributed in this repository. Users who want to reproduce the preprocessing step from scratch should download the raw EuroMillions CSV files from win2day.at and place them inside `data/raw/`.
 
 ## Data Source
 
 Historical EuroMillions result files were obtained from win2day.at.
 
-This repository does not redistribute the raw data files. The data folders are excluded from version control, and users should obtain the original files from the data provider if they want to reproduce the analysis.
+This repository does not redistribute the raw yearly CSV files. The cleaned dataset used by the Streamlit app is included for reproducibility and ease of use. Users should obtain the original raw files from win2day.at if they want to reproduce the preprocessing step from scratch.
 
 ## Recommendation Methods
 
@@ -129,6 +129,7 @@ euromillions-ml-exploration/
 ├── data/
 │   ├── raw/
 │   └── processed/
+│       └── draws_clean.csv
 │
 ├── notebooks/
 │
@@ -136,6 +137,7 @@ euromillions-ml-exploration/
 │   └── figures/
 │
 ├── scripts/
+│   ├── __init__.py
 │   ├── check_data.py
 │   ├── check_features.py
 │   ├── check_baselines.py
@@ -190,7 +192,15 @@ euromillions-ml-exploration/
 
 ## Data Preparation
 
-Place the raw yearly EuroMillions CSV files inside:
+The repository already includes the cleaned dataset required to run the Streamlit app:
+
+```text
+data/processed/draws_clean.csv
+```
+
+So, for normal app usage, you do not need to run the preprocessing step.
+
+If you want to reproduce the preprocessing from the original yearly CSV files, place the raw EuroMillions CSV files inside:
 
 ```text
 data/raw/
@@ -202,7 +212,7 @@ Then run:
 python -m scripts.check_data
 ```
 
-This creates:
+This regenerates:
 
 ```text
 data/processed/draws_clean.csv
@@ -340,4 +350,4 @@ Possible improvements:
 
 This project is intended for educational use.
 
-The code may be shared and modified according to the repository license. The raw lottery data is not redistributed in this repository and should be obtained from the original data provider.
+The code may be shared and modified according to the repository license. The raw yearly lottery CSV files are not redistributed in this repository and should be obtained from the original data provider. The cleaned dataset is included to make the Streamlit app reproducible and easy to run.
